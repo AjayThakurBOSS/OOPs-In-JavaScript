@@ -1,0 +1,15 @@
+/* body {
+    background-image: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, violet);
+    background-repeat: no-repeat;
+
+} */
+
+body {
+    background: -webkit-gradient(linear, left top, left bottom, from(#066), to(#444)) fixed;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

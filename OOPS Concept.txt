@@ -1,0 +1,171 @@
+Object Oriented Programming (OOPs)
+
+- As the name suggests, OOPs refers to the language that use objects in programming, 
+	they use objects as primary sourse to implement what is to happen in the code. 
+- Objects are seen by the viwer, performing task assigned by you.
+- OOPs aims to implement real-world entities like Inheritance, hiding(encapsulation), polymorphism.
+- The main aim of OOP is to bind together the data and functions that operate on them so that no other part of code can access this data except that function.
+
+ACCESS MODIFIRE:
+===============
+  - it defines the access type of the method, i.e. from where it can be accessed in your application.  
+  - Access modifiers are keywords used to specify the declares accessibility of member or a type.
+	- It has three types: 
+	 1. Private - access is limited
+	 2. Public - can be access from anywhere, access is not restricted.
+	 3. Privileged/Protected - Access is limited to the containing class or types derived from the containing class.
+
+= lets understand, how access modifiers i.e. variables and methods are declared and accessed as Public, Private and protected in JavaScript.
+
+function Vehicle() {}
+or
+var Vehicle = function() {}
+
+var car = new Vehicle();
+var bus = new Vehicle();
+
+===> Public Property and Public Method in JavaScript:
+    -------------------------------------------------
+
+-Public properties are declared with the  this.variableName and may be read/written from outside of object.
+
+function Vehicle(name){
+	//Public
+	this.name = name;
+}
+
+-Public propeties and public methods can also be defined using prototype
+
+Classname.prototype.variablename = something;
+
+- these are accessable within the class name using this keyword (for ex. this.variablename) or can be accessed outside the class using object instance. (objOfClassname.variablename)
+
+Classname.prototype.methodName = function() {....}
+for Example:
+Vehicle.prototype.setColor = function() {
+
+}
+
+=====> Private Properties and Private Functions:
+      -----------------------------------------
+var keyword is used inside the Object to declare a private property.
+For Example:
+function Vehicle(name){
+	//Private
+	var name = name;
+}
+
+- Private functions also defined using var keyword inside the Object.
+For Example:
+function Vehicle(name){
+	var getName = function(){
+		// Private method definition
+		}
+}
+
+==> How to access Private variables from outside:
+
+Since private variables cannot be access directly fro, outside tj=he class, so to access private variables from outside the class priviledged method's help needs to be required.
+Inside the class privileged method will access the private variable and return that variable which can be called outside the class.
+
+For Example:
+function Vehicle(){
+	var name = "ford";
+	// Methods to access private variables (methods needs to be privileged which needs to be defined using this keyword
+	this.getName = function(){
+		return name;
+		};
+}
+var v = new Vehicle();
+alert(v.getName`()); // will alert "ford" 
+
+=============================
+
+The RETURN TYPE
+==============
+	- the data type of the value returnd by the method or void if it does not return a value.
+
+Method Name
+===========
+
+	- the rules for field names apply to method names as well, but the convention is a little different.
+
+Parameter list:
+==============
+	-  Comma-separated list of the input parameters that are defined, preceded by their data type, within the enclosed parentheses. If there are no parameters, you must use empty parentheses ().
+
+Exception list:
+==============
+ 	 - The exceptions you expect the method to throw. You can specify these exception(s).
+
+Method body:
+===========
+ 	- It is the block of code, enclosed between braces, that you need to execute to perform your intended operations.
+
+
+MESSAGE PASSING
+===============
+
+  - Message passing involves specifying the name of object, the name of the function and the information to be sent.
+
+The different characteristics of an Object-Oriented Programming Language.
+========================================================================
+ 
+OOPs concepts are as follows:
+	1. Class
+	2. Object
+	3. Method and Method Passing
+	4. Pillors of OOPs
+		. Abstractions
+		. Encapsulation
+		. Inheritance
+		. Polymorphism
+			->Compile-time Polymorphism
+			->Runtime Polymorphism
+
+1. CLASS
+   =====
+A class is a user-defined blueprint or prototype from which objects re created. 
+- it represents a set of propeties or methods that are common to all objects of one type. 
+- Using class you can create multiple objects with the same behavior isted of writing their code multiple times.
+	class can include these components in order:
+	1. Modifiers
+	2. Class name
+	3. Body
+
+2. OBJECTS
+  ========
+- An Object is a basic unit of OOP that represents real-life entities. 
+- A typical program creates many objects, which interact by invoking methods.
+- Objects are what perform your code, they are the part of your code visible to user.
+
+3. Method:
+==========
+ - A method is a collection of statements that perform some specific task and return the result to the caller.
+-  A method can perform some specific task without returning anything. 
+-  Methods allow us to reuse the code without retyping it, which is why they are considered time savers.
+
+
+ 
+ABSTRACTIONS
+============
+- Data Abstraction is the prperty by vertue of which only the essential details are displayed to the user. 
+- The trivial or non-essential units are not displayed to the users.
+
+
+
+
+
+Prototypes:
+==========
+learn prototype methods of Strings from mdn
+learn prototype methods of Array 
+
+any method has to write in class then we should write at prototype level.
+So that it can be available to every object.
+
+check DevTool (console wala) to find whall all method they have access to.
+When Explaining any questions to interviewer , always give  an example 
+
+- 
+
